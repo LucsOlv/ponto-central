@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connecting — Ponto Central</title>
+<link rel="stylesheet" href="../../../style.css">
+<script>
+  // OAuth bounce: forward the platform's ?code=&state= to the local Ponto Central app.
+  location.replace("http://localhost:3107/api/social/callback/tiktok" + location.search);
+</script>
+</head>
+<body>
+<main>
+<h1>Connecting your account…</h1>
+<p>If nothing happens, <a id="next" href="http://localhost:3107/api/social/callback/tiktok">continue to Ponto Central</a>.</p>
+<script>document.getElementById("next").href += location.search;</script>
+</main>
+</body>
+</html>
